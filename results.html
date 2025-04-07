@@ -1,0 +1,701 @@
+// Generate weaknesses as counterpoints to strengths
+function generateWeaknesses(type) {
+    const weaknesses = [];
+    
+    if (type.traits.includes('Logical') || type.traits.includes('Objective')) {
+        weaknesses.push({
+            title: "May seem emotionally detached",
+            description: "Others might perceive you as cold or distant when you're focused on facts"
+        });
+    }
+    
+    if (type.traits.includes('Precise') || type.traits.includes('Detail-oriented')) {
+        weaknesses.push({
+            title: "Perfectionist tendencies",
+            description: "You might struggle to accept 'good enough' solutions"
+        });
+    }
+    
+    if (type.traits.includes('Creative') || type.traits.includes('Innovative')) {
+        weaknesses.push({
+            title: "May overlook practical constraints",
+            description: "Your focus on possibilities can sometimes ignore real-world limitations"
+        });
+    }
+    
+    if (type.traits.includes('Empathetic') || type.traits.includes('Understanding')) {
+        weaknesses.push({
+            title: "Can absorb others' emotions",
+            description: "You might take on others' problems as your own and become overwhelmed"
+        });
+    }
+    
+    if (type.traits.includes('Determined') || type.traits.includes('Focused')) {
+        weaknesses.push({
+            title: "May appear stubborn",
+            description: "Your persistence might come across as unwillingness to compromise"
+        });
+    }
+    
+    // Add some generic weaknesses if we don't have enough specific ones
+    if (weaknesses.length < 3) {
+        weaknesses.push({
+            title: "May overthink decisions",
+            description: "Sometimes analysis can lead to paralysis instead of action"
+        });
+        
+        weaknesses.push({
+            title: "Might struggle with criticism",
+            description: "You may take feedback personally rather than seeing it as an opportunity for growth"
+        });
+    }
+    
+    return weaknesses.slice(0, 5); // Limit to 5 weaknesses
+}
+
+// Generate growth opportunities based on weaknesses
+function generateGrowthOpportunities(weaknesses) {
+    const opportunities = [];
+    
+    weaknesses.forEach(weakness => {
+        if (weakness.title.includes("emotionally detached")) {
+            opportunities.push("Developing emotional intelligence to complement your logical reasoning");
+        } else if (weakness.title.includes("perfectionist")) {
+            opportunities.push("Practicing flexibility when perfect solutions aren't possible");
+        } else if (weakness.title.includes("practical constraints")) {
+            opportunities.push("Testing ideas against real-world constraints before fully committing to them");
+        } else if (weakness.title.includes("absorb others'")) {
+            opportunities.push("Setting healthy emotional boundaries while maintaining empathy");
+        } else if (weakness.title.includes("stubborn")) {
+            opportunities.push("Being open to alternative approaches even when committed to a goal");
+        } else if (weakness.title.includes("overthink")) {
+            opportunities.push("Setting time limits for decision-making to avoid analysis paralysis");
+        } else if (weakness.title.includes("criticism")) {
+            opportunities.push("Viewing feedback as information rather than personal judgment");
+        } else {
+            opportunities.push("Developing self-awareness about your tendencies and their impact on others");
+        }
+    });
+    
+    // Add a couple generic growth opportunities
+    if (opportunities.length < 3) {
+        opportunities.push("Seeking out perspectives different from your own to broaden your thinking");
+        opportunities.push("Practicing mindfulness to become more aware of your thoughts and reactions");
+        opportunities.push("Finding mentors who exemplify the qualities you'd like to develop");
+    }
+    
+    return opportunities.slice(0, 5); // Limit to 5 opportunities
+}
+
+// Populate career content
+function populateCareerContent(type) {
+    // Career intro based on personality type
+    let careerIntro = `Your ${type.traits[0].toLowerCase()} and ${type.traits[1].toLowerCase()} nature makes you well-suited for careers that value these qualities. You excel in roles where you can apply your natural strengths to meaningful challenges.`;
+    document.getElementById('careerIntro').textContent = careerIntro;
+    
+    // Work environment factors
+    const workEnvironmentList = document.getElementById('workEnvironmentList');
+    workEnvironmentList.innerHTML = '';
+    
+    const environments = generateWorkEnvironments(type);
+    environments.forEach(env => {
+        const li = document.createElement('li');
+        li.textContent = env;
+        workEnvironmentList.appendChild(li);
+    });
+    
+    // Career paths
+    const careerGrid = document.getElementById('careerGrid');
+    careerGrid.innerHTML = '';
+    
+    const careers = generateCareers(type);
+    careers.forEach(career => {
+        const careerCard = document.createElement('div');
+        careerCard.className = 'career-card';
+        
+        const title = document.createElement('h5');
+        title.textContent = career.title;
+        
+        const description = document.createElement('p');
+        description.textContent = career.description;
+        
+        const statsDiv = document.createElement('div');
+        statsDiv.className = 'growth-stats';
+        
+        const bar = document.createElement('div');
+        bar.className = 'growth-bar';
+        
+        const value = document.createElement('div');
+        value.className = 'growth-value';
+        value.style.width = `${career.match}%`;
+        
+        const matchSpan = document.createElement('span');
+        matchSpan.textContent = `${career.match}% match`;
+        
+        bar.appendChild(value);
+        statsDiv.appendChild(bar);
+        statsDiv.appendChild(matchSpan);
+        
+        careerCard.appendChild(title);
+        careerCard.appendChild(description);
+        careerCard.appendChild(statsDiv);
+        
+        careerGrid.appendChild(careerCard);
+    });
+}
+
+// Generate work environments based on personality type
+function generateWorkEnvironments(type) {
+    const environments = [];
+    
+    if (type.traits.includes('Logical') || type.traits.includes('Methodical')) {
+        environments.push("Value accuracy and attention to detail");
+    }
+    
+    if (type.traits.includes('Creative') || type.traits.includes('Innovative')) {
+        environments.push("Encourage new ideas and innovative approaches");
+    }
+    
+    if (type.traits.includes('Empathetic') || type.traits.includes('Supportive')) {
+        environments.push("Prioritize positive relationships and team harmony");
+    }
+    
+    if (type.traits.includes('Determined') || type.traits.includes('Focused')) {
+        environments.push("Reward results and goal achievement");
+    }
+    
+    if (type.traits.includes('Curious') || type.traits.includes('Adaptable')) {
+        environments.push("Offer variety and continuous learning opportunities");
+    }
+    
+    // Add some generic environments if needed
+    if (environments.length < 3) {
+        environments.push("Provide clear expectations and feedback");
+        environments.push("Allow for a balance of independent and collaborative work");
+        environments.push("Recognize and appreciate your unique contributions");
+    }
+    
+    return environments.slice(0, 5); // Limit to 5 environments
+}
+
+// Generate careers based on personality type
+function generateCareers(type) {
+    const careers = [];
+    
+    // Analytical Thinker
+    if (type.id === 'analytical') {
+        careers.push({
+            title: "Data Scientist/Analyst",
+            description: "Your ability to analyze complex data sets and identify patterns makes you well-suited for data-focused roles.",
+            match: 92
+        });
+        
+        careers.push({
+            title: "Software Engineer",
+            description: "Your logical thinking and problem-solving skills are valuable in designing and implementing software solutions.",
+            match: 88
+        });
+        
+        careers.push({
+            title: "Research Scientist",
+            description: "Your curiosity and methodical approach are assets in scientific research and investigation.",
+            match: 85
+        });
+        
+        careers.push({
+            title: "Financial Analyst",
+            description: "Your ability to work with numbers and spot patterns can be applied to financial markets and investment analysis.",
+            match: 82
+        });
+    }
+    
+    // Creative Visionary
+    else if (type.id === 'creative') {
+        careers.push({
+            title: "UX/UI Designer",
+            description: "Your creative vision and understanding of user needs make you ideal for designing intuitive interfaces.",
+            match: 94
+        });
+        
+        careers.push({
+            title: "Content Creator",
+            description: "Your innovative thinking helps you develop engaging content across various media platforms.",
+            match: 90
+        });
+        
+        careers.push({
+            title: "Marketing Strategist",
+            description: "Your ability to envision possibilities helps you create compelling marketing campaigns.",
+            match: 87
+        });
+        
+        careers.push({
+            title: "Product Developer",
+            description: "Your imagination and problem-solving skills are valuable in creating new products and services.",
+            match: 85
+        });
+    }
+    
+    // Compassionate Nurturer
+    else if (type.id === 'compassionate') {
+        careers.push({
+            title: "Counselor/Therapist",
+            description: "Your empathy and listening skills make you well-suited to helping others through challenges.",
+            match: 95
+        });
+        
+        careers.push({
+            title: "HR Specialist",
+            description: "Your ability to understand others' needs helps you support employee well-being and development.",
+            match: 89
+        });
+        
+        careers.push({
+            title: "Healthcare Provider",
+            description: "Your caring nature and desire to help make you valuable in healthcare settings.",
+            match: 86
+        });
+        
+        careers.push({
+            title: "Social Worker",
+            description: "Your compassion and support skills help you advocate for those who need assistance.",
+            match: 84
+        });
+    }
+    
+    // Determined Achiever
+    else if (type.id === 'determined') {
+        careers.push({
+            title: "Project Manager",
+            description: "Your focus and organizational skills help you coordinate complex projects and teams.",
+            match: 93
+        });
+        
+        careers.push({
+            title: "Entrepreneur",
+            description: "Your drive and persistence support you in building and growing successful ventures.",
+            match: 91
+        });
+        
+        careers.push({
+            title: "Sales Executive",
+            description: "Your goal-oriented nature helps you excel in meeting targets and building client relationships.",
+            match: 88
+        });
+        
+        careers.push({
+            title: "Athletic Coach",
+            description: "Your determination and ability to motivate help others achieve their best performance.",
+            match: 85
+        });
+    }
+    
+    // Curious Explorer
+    else if (type.id === 'explorer') {
+        careers.push({
+            title: "Journalist/Writer",
+            description: "Your curiosity and adaptability help you explore diverse topics and share insights.",
+            match: 94
+        });
+        
+        careers.push({
+            title: "Consultant",
+            description: "Your open-mindedness and quick learning help you adapt to various industries and challenges.",
+            match: 90
+        });
+        
+        careers.push({
+            title: "Educational Developer",
+            description: "Your love of learning and diverse interests make you well-suited for creating educational content.",
+            match: 87
+        });
+        
+        careers.push({
+            title: "Travel/Tourism Professional",
+            description: "Your adventurous spirit and adaptability are assets in roles involving travel and new experiences.",
+            match: 85
+        });
+    }
+    
+    // Generic careers for any unmatched types
+    else {
+        careers.push({
+            title: "Business Analyst",
+            description: "Your analytical abilities help organizations improve their processes and systems.",
+            match: 85
+        });
+        
+        careers.push({
+            title: "Content Specialist",
+            description: "Your communication skills help you create engaging and informative content.",
+            match: 82
+        });
+        
+        careers.push({
+            title: "Customer Experience Manager",
+            description: "Your understanding of people helps you improve how organizations interact with customers.",
+            match: 80
+        });
+        
+        careers.push({
+            title: "Project Coordinator",
+            description: "Your organizational skills help keep projects on track and team members aligned.",
+            match: 78
+        });
+    }
+    
+    return careers;
+}
+
+// Populate relationships content
+function populateRelationshipsContent(type) {
+    // Relationship intro based on personality type
+    let relationshipsIntro = `As a ${type.type}, you bring your ${type.traits[0].toLowerCase()} and ${type.traits[1].toLowerCase()} qualities to your relationships. Understanding how these traits influence your interactions can help you build stronger connections.`;
+    document.getElementById('relationshipsIntro').textContent = relationshipsIntro;
+    
+    // Friendships content
+    let friendshipsContent = generateFriendshipsContent(type);
+    document.getElementById('friendshipsContent').textContent = friendshipsContent;
+    
+    // Friendship qualities
+    const friendshipList = document.getElementById('friendshipQualities');
+    friendshipList.innerHTML = '';
+    
+    const qualities = generateFriendshipQualities(type);
+    qualities.forEach(quality => {
+        const li = document.createElement('li');
+        li.textContent = quality;
+        friendshipList.appendChild(li);
+    });
+    
+    // Communication tips
+    const communicationList = document.getElementById('communicationTips');
+    communicationList.innerHTML = '';
+    
+    const tips = generateCommunicationTips(type);
+    tips.forEach(tip => {
+        const li = document.createElement('li');
+        li.textContent = tip;
+        communicationList.appendChild(li);
+    });
+}
+
+// Generate friendships content based on personality type
+function generateFriendshipsContent(type) {
+    if (type.id === 'analytical') {
+        return "You tend to form deep connections with a few close friends rather than maintaining a large social circle. You value intellectual stimulation in friendships and enjoy discussing ideas, theories, and interesting concepts.";
+    } else if (type.id === 'creative') {
+        return "You bring imagination and originality to your friendships. You enjoy exploring new experiences with friends and appreciate those who are open to your creative perspective on life.";
+    } else if (type.id === 'compassionate') {
+        return "You create nurturing, supportive friendships where others feel understood and valued. You're often the person friends turn to for emotional support and guidance.";
+    } else if (type.id === 'determined') {
+        return "You're a loyal and reliable friend who follows through on commitments. You may have a smaller circle of close friends with whom you build long-lasting relationships.";
+    } else if (type.id === 'explorer') {
+        return "You enjoy diverse friendships with people from various backgrounds. Your relationships are often characterized by shared activities, adventures, and learning experiences.";
+    } else {
+        return "You bring your unique qualities to friendships, creating connections that reflect your values and interests. Your authentic approach helps you build meaningful relationships.";
+    }
+}
+
+// Generate friendship qualities based on personality type
+function generateFriendshipQualities(type) {
+    const qualities = [];
+    
+    if (type.traits.includes('Logical') || type.traits.includes('Objective')) {
+        qualities.push("Honest and straightforward communication");
+    }
+    
+    if (type.traits.includes('Precise') || type.traits.includes('Detail-oriented')) {
+        qualities.push("Reliability and consistency in your commitments");
+    }
+    
+    if (type.traits.includes('Creative') || type.traits.includes('Innovative')) {
+        qualities.push("Bringing fresh perspectives and unique insights");
+    }
+    
+    if (type.traits.includes('Empathetic') || type.traits.includes('Supportive')) {
+        qualities.push("Emotional understanding and compassionate responses");
+    }
+    
+    if (type.traits.includes('Determined') || type.traits.includes('Focused')) {
+        qualities.push("Loyalty and perseverance in challenging times");
+    }
+    
+    // Add some generic qualities if needed
+    if (qualities.length < 3) {
+        qualities.push("Thoughtful attention to what matters to others");
+        qualities.push("Authenticity in how you present yourself");
+        qualities.push("Respecting boundaries and personal differences");
+    }
+    
+    return qualities.slice(0, 4); // Limit to 4 qualities
+}
+
+// Generate communication tips based on personality type
+function generateCommunicationTips(type) {
+    const tips = [];
+    
+    if (type.id === 'analytical') {
+        tips.push("Remember to consider emotional aspects alongside logical analysis");
+        tips.push("Express appreciation explicitly, as others may not infer it from your actions");
+        tips.push("Practice active listening without immediately trying to solve problems");
+        tips.push("Be patient with those who communicate more emotionally or indirectly");
+    } else if (type.id === 'creative') {
+        tips.push("Provide context when sharing your innovative ideas to help others follow your thinking");
+        tips.push("Balance your creativity with practical considerations when working with others");
+        tips.push("Listen fully to others' input before suggesting alternative approaches");
+        tips.push("Recognize when others need concrete details rather than conceptual ideas");
+    } else if (type.id === 'compassionate') {
+        tips.push("Set healthy boundaries to avoid emotional exhaustion from others' problems");
+        tips.push("Express your own needs clearly rather than focusing exclusively on others");
+        tips.push("Deliver necessary constructive feedback even when it might temporarily cause discomfort");
+        tips.push("Balance emotional support with practical problem-solving when appropriate");
+    } else if (type.id === 'determined') {
+        tips.push("Soften your direct approach when dealing with sensitive individuals or topics");
+        tips.push("Take time to acknowledge others' feelings before moving to solutions");
+        tips.push("Consider different perspectives before advocating strongly for your approach");
+        tips.push("Recognize when persistence might be perceived as stubbornness");
+    } else if (type.id === 'explorer') {
+        tips.push("Follow through on communication commitments to build trust");
+        tips.push("Focus on the current conversation rather than jumping to new topics");
+        tips.push("Provide structure in your communication when working with detail-oriented people");
+        tips.push("Balance your openness to new ideas with consistent values and principles");
+    } else {
+        tips.push("Adapt your communication style to match the needs of different situations");
+        tips.push("Practice active listening to ensure you understand others' perspectives");
+        tips.push("Express your thoughts clearly while remaining open to feedback");
+        tips.push("Check for understanding to ensure your message was received as intended");
+    }
+    
+    return tips.slice(0, 5); // Limit to 5 tips
+}
+
+// Populate growth content
+function populateGrowthContent(type) {
+    // Growth intro based on personality type
+    let growthIntro = `Your ${type.type.toLowerCase()} personality provides many strengths, but like all types, there are areas where conscious development can help you become more balanced and effective in all areas of life.`;
+    document.getElementById('growthIntro').textContent = growthIntro;
+    
+    // Development exercises
+    const exercisesList = document.getElementById('developmentExercises');
+    exercisesList.innerHTML = '';
+    
+    const exercises = generateDevelopmentExercises(type);
+    exercises.forEach(exercise => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${exercise.title}:</strong> ${exercise.description}`;
+        exercisesList.appendChild(li);
+    });
+}
+
+// Generate development exercises based on personality type
+function generateDevelopmentExercises(type) {
+    const exercises = [];
+    
+    if (type.id === 'analytical') {
+        exercises.push({
+            title: "Emotional awareness practice",
+            description: "Take time daily to identify and name your emotions as they arise without judgment"
+        });
+        
+        exercises.push({
+            title: "Perspective-taking",
+            description: "When disagreeing with someone, try to articulate their viewpoint as fairly as possible before responding"
+        });
+        
+        exercises.push({
+            title: "Creative exploration",
+            description: "Engage regularly in an artistic or creative activity without concern for getting it right"
+        });
+        
+        exercises.push({
+            title: "Social connection",
+            description: "Schedule regular social activities to balance your tendency toward solitary pursuits"
+        });
+        
+        exercises.push({
+            title: "Emotional journaling",
+            description: "Keep a record of emotional reactions alongside your analytical thoughts"
+        });
+    } else if (type.id === 'creative') {
+        exercises.push({
+            title: "Implementation planning",
+            description: "Practice breaking down your creative ideas into concrete, actionable steps with timelines"
+        });
+        
+        exercises.push({
+            title: "Structured routine",
+            description: "Establish consistent daily habits that provide a framework for your creative work"
+        });
+        
+        exercises.push({
+            title: "Feedback integration",
+            description: "Actively seek and thoughtfully consider practical feedback on your ideas"
+        });
+        
+        exercises.push({
+            title: "Completion practice",
+            description: "Focus on finishing projects before starting new ones, even when enthusiasm wanes"
+        });
+        
+        exercises.push({
+            title: "Constraint creativity",
+            description: "Give yourself strict limitations (time, materials, etc.) and create within those boundaries"
+        });
+    } else if (type.id === 'compassionate') {
+        exercises.push({
+            title: "Boundary setting",
+            description: "Practice saying no to requests that drain your energy without serving your core values"
+        });
+        
+        exercises.push({
+            title: "Self-care prioritization",
+            description: "Schedule non-negotiable time for your own needs before addressing others' concerns"
+        });
+        
+        exercises.push({
+            title: "Constructive disagreement",
+            description: "Practice expressing differing opinions while maintaining respect for relationships"
+        });
+        
+        exercises.push({
+            title: "Logical analysis",
+            description: "When making important decisions, list pros and cons before considering emotional factors"
+        });
+        
+        exercises.push({
+            title: "Healthy detachment",
+            description: "Practice supporting others while recognizing that their problems are not yours to solve"
+        });
+    } else if (type.id === 'determined') {
+        exercises.push({
+            title: "Flexible planning",
+            description: "Practice adapting your goals when circumstances change rather than pushing through at all costs"
+        });
+        
+        exercises.push({
+            title: "Active listening",
+            description: "In conversations, focus entirely on understanding others before sharing your perspective"
+        });
+        
+        exercises.push({
+            title: "Collaboration experiment",
+            description: "On your next project, intentionally incorporate others' ideas even if they differ from your approach"
+        });
+        
+        exercises.push({
+            title: "Mindfulness practice",
+            description: "Take time daily to be present without focusing on achievement or future goals"
+        });
+        
+        exercises.push({
+            title: "Process appreciation",
+            description: "Regularly acknowledge the journey and learning rather than focusing exclusively on outcomes"
+        });
+    } else if (type.id === 'explorer') {
+        exercises.push({
+            title: "Commitment practice",
+            description: "Choose one interest or project and stick with it for a set period before allowing yourself to shift focus"
+        });
+        
+        exercises.push({
+            title: "Depth exploration",
+            description: "Select a topic that interests you and study it in much greater detail than you normally would"
+        });
+        
+        exercises.push({
+            title: "Routine establishment",
+            description: "Create and maintain daily habits that provide structure around your exploratory tendencies"
+        });
+        
+        exercises.push({
+            title: "Follow-through tracking",
+            description: "Keep a log of commitments made and completed to build awareness of your completion patterns"
+        });
+        
+        exercises.push({
+            title: "Focused reflection",
+            description: "Regularly review what you've learned from your diverse experiences and identify connecting themes"
+        });
+    } else {
+        exercises.push({
+            title: "Self-reflection practice",
+            description: "Take time regularly to consider your patterns, preferences, and growth opportunities"
+        });
+        
+        exercises.push({
+            title: "Strength leveraging",
+            description: "Identify ways to apply your natural strengths to areas where you face challenges"
+        });
+        
+        exercises.push({
+            title: "Feedback solicitation",
+            description: "Ask trusted friends or colleagues for honest input about your blind spots"
+        });
+        
+        exercises.push({
+            title: "Discomfort exploration",
+            description: "Regularly try activities slightly outside your comfort zone to expand your capabilities"
+        });
+        
+        exercises.push({
+            title: "Value alignment check",
+            description: "Periodically review whether your daily actions match your core values and priorities"
+        });
+    }
+    
+    return exercises;
+}
+
+// Handle share button clicks
+document.querySelectorAll('.share-button').forEach(button => {
+    button.addEventListener('click', function() {
+        const platform = this.getAttribute('data-platform');
+        const resultType = document.getElementById('resultType').textContent;
+        const resultDesc = document.getElementById('resultDescription').textContent;
+        const shareUrl = window.location.href;
+        
+        const shareText = `I just discovered my personality type is "${resultType}" on KnowYouBetter! ${resultDesc}`;
+        
+        switch(platform) {
+            case 'facebook':
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank', 'width=600,height=400');
+                break;
+            case 'twitter':
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=600,height=400');
+                break;
+            case 'linkedin':
+                window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=600,height=400');
+                break;
+            case 'copy':
+                navigator.clipboard.writeText(`${shareText} - ${shareUrl}`).then(() => {
+                    alert('Link copied to clipboard!');
+                });
+                break;
+        }
+    });
+});
+
+// Handle tab switching
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons and contents
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding content
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+    });
+});
+
+// Handle download report button
+document.getElementById('download-report').addEventListener('click', () => {
+    alert('Your full personality report is being generated as a PDF. This would typically download a complete report with all sections.');
+});
+
+// Load personality data when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    loadPersonalityData();
+});

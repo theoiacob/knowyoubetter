@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-2926694720347346">
+    <title>KnowYouBetter - Discover Your Personality</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #F4F7FD;  /* Change from #FFF8E1 */
+    color: #253542;  /* Change from #253542 */
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .header {
+    background-color: #253542;
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.logo-accent {
+    color: #F8497D;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #F8497D;
+}
+        
+        /* Home Page Styles */
+        .hero {
+    background-color: #253542;
+    color: #FFF;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    color: #F8497D;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #000000; /* Add this line to make it black */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    color: #000000; /* Add this line to make it black */
+    opacity: 0.9;
+}
+
+.hero::before, .hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.hero::before {
+    background-color: #F8497D;
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -50px;
+}
+
+.hero::after {
+    background-color: #5863B7;
+    width: 250px;
+    height: 250px;
+    bottom: -100px;
+    left: -50px;
+}
+        
+        .btn-test {
+            display: inline-block;
+            background-color: #F8497D;  /* Change from #5863B7 */
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(248, 73, 125, 0.4);  /* Update shadow color */
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-test:hover {
+            background-color: #FC811E;  /* Change from #5D4FBF */
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(248, 73, 125, 0.5);  /* Update shadow color */
+        }
+        
+        .ad-container {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 2rem auto;
+            text-align: center;
+            max-width: 1200px;
+            position: relative;
+        }
+        
+        .ad-banner {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        .ad-small {
+            width: 100%;
+            padding: 1rem;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            text-align: center;
+            color: #666;
+            font-weight: bold;
+        }
+        
+        .types-section {
+            padding: 4rem 0;
+            position: relative;
+        }
+        
+        .types-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            color: #253542;
+        }
+        
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .type-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            position: relative;
+            padding-top: 3rem;
+        }
+        
+        .type-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .type-card h3 {
+            color: #253542;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .type-card p {
+            color: #253542;
+            opacity: 0.8;
+        }
+        
+        .type-icon {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .type-card:nth-child(1) {
+            border-top: 5px solid #F8497D;
+        }
+        
+        .type-card:nth-child(2) {
+            border-top: 5px solid #ff9f3a;
+        }
+        
+        .type-card:nth-child(3) {
+            border-top: 5px solid #06D6A0;
+        }
+        
+        .type-card:nth-child(4) {
+            border-top: 5px solid #118AB2;
+        }
+        
+        .benefits-section {
+            padding: 4rem 0;
+            background-color: #5863B7;  /* Change from #5863B7 */
+            color: white;
+            border-radius: 30px;
+            margin: 2rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefits-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: 10%;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .benefits-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 10%;
+            width: 120px;
+            height: 120px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .benefits-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+        
+        .benefit-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s;
+            position: relative;
+            padding-top: 3.5rem;
+        }
+        
+        .benefit-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .benefit-icon {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background-color: #F8E9A1;  /* Change from #ff9f3a */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .benefit-card h3 {
+            color: #F8E9A1;  /* Change from #ff9f3a */
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .benefit-card p {
+            opacity: 0.9;
+        }
+        
+        .steps-section {
+            padding: 4rem 0;
+        }
+        
+        .steps-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            color: #253542;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .step-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            padding-top: 3rem;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #5863B7;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .step-card h3 {
+            color: #253542;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .step-card p {
+            color: #253542;
+            opacity: 0.8;
+        }
+        
+        .footer {
+            background-color: #253542;
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: white; /* Ensure headings are white */
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #ff9f3a;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7); /* Make copyright text white with some transparency */
+}
+        
+        .decorative-shape {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .shape-1 {
+            top: 10%;
+            right: 5%;
+            width: 80px;
+            height: 80px;
+            background-color: #F8497D;
+            opacity: 0.2;
+        }
+        
+        .shape-2 {
+            bottom: 20%;
+            left: 10%;
+            width: 120px;
+            height: 120px;
+            background-color: #ff9f3a;
+            opacity: 0.2;
+        }
+        
+        .shape-3 {
+            top: 40%;
+            left: 20%;
+            width: 60px;
+            height: 60px;
+            background-color: #06D6A0;
+            opacity: 0.2;
+        }
+        
+        .ad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        /* Test Page Styles */
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: none; /* Hidden by default */
+        }
+        
+        .home-container {
+            display: block; /* Shown by default */
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 12px;
+            background-color: #E9E6F5;
+            border-radius: 10px;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: #5863B7;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+        
+        .question-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .question-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 107, 129, 0.1);
+            border-radius: 50%;
+        }
+        
+        .question-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 80px;
+            height: 80px;
+            background-color: rgba(106, 90, 205, 0.1);
+            border-radius: 50%;
+        }
+        
+        .question-card.fade-out {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        
+        .question-card.fade-in {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        
+        .question-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #253542;
+        }
+        
+        .question {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #253542;
+        }
+        
+        .response-labels {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 0.5rem;
+        }
+        
+        .response-label {
+            font-size: 0.9rem;
+            color: #253542;
+        }
+        
+        .response-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem 0;
+        }
+        
+        .response-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 3px solid;
+            background-color: transparent;
+        }
+        
+        .response-option:hover {
+            transform: scale(1.1);
+        }
+        
+        .response-option:active {
+            transform: scale(0.95);
+        }
+        
+        .response-option.selected {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.3);
+        }
+        
+        .response-option:nth-child(1) {
+    border-color: #2ecc71; /* Keep green for strongly disagree */
+}
+        
+.response-option:nth-child(2) {
+    border-color: #8fe0c5; /* Lighter green */
+}
+
+.response-option:nth-child(3) {
+    border-color: #c9c9c9; /* Light gray */
+}
+
+.response-option:nth-child(4) {
+    border-color: #e0e0e0; /* Lightest gray for middle/neutral option */
+}
+
+.response-option:nth-child(5) {
+    border-color: #c9c9c9; /* Light gray */
+}
+
+.response-option:nth-child(6) {
+    border-color: #f5a89a; /* Light red */
+}
+
+.response-option:nth-child(7) {
+    border-color: #e74c3c; /* Keep red for strongly agree */
+}
+        
+        /* Navigation buttons styles */
+        .test-navigation {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+
+        .nav-btn {
+            background-color: white;
+            border: 2px solid #5863B7;
+            color: #5863B7;
+            padding: 0.5rem 1.2rem;
+            border-radius: 100px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: #E9E6F5;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn:disabled {
+            border-color: #ccc;
+            color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Simple Results Card */
+        .simple-result-card {
+            display: none;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .simple-result-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 107, 129, 0.1);
+            border-radius: 50%;
+        }
+        
+        .simple-result-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 80px;
+            height: 80px;
+            background-color: rgba(106, 90, 205, 0.1);
+            border-radius: 50%;
+        }
+        
+        .result-title {
+            color: #253542;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .result-type {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #5863B7;
+            font-weight: 700;
+        }
+        
+        .result-description {
+            margin-bottom: 2rem;
+            color: #253542;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #F8497D;  /* Change from #5863B7 */
+            color: white;
+            padding: 0.8rem 1.6rem;
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(248, 73, 125, 0.4);  /* Update shadow color */
+        }
+        
+        .btn:hover {
+            background-color: #FC811E;  /* Change from #5D4FBF */
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(248, 73, 125, 0.5);  /* Update shadow color */
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            color: #5863B7;  /* Change from #5863B7 */
+            border: 2px solid #5863B7;  /* Change from #5863B7 */
+        }
+        
+        .btn-secondary:hover {
+            background-color: #E9E6F5;
+        }
+        
+        .ad-square {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        .illustration-wrapper {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        /* Enhanced Results Styles */
+        .results-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: none; /* Hidden by default */
+        }
+        
+        .result-header {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        
+        .result-type-large {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #5863B7;
+            font-weight: 700;
+        }
+        
+        .type-description {
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .type-traits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .trait-badge {
+            background-color: #E9E6F5;
+            color: #253542;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .share-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #E9E6F5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .share-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .result-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            background-color: white;
+            padding: 0.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tab-button {
+            padding: 0.8rem 1.5rem;
+            background-color: transparent;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #253542;
+            transition: all 0.3s;
+        }
+        
+        .tab-button:hover {
+            background-color: #E9E6F5;
+        }
+        
+        .tab-button.active {
+            background-color: #5863B7;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .tab-content h3 {
+            color: #5863B7;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .tab-content h4 {
+            color: #253542;
+            margin: 1.5rem 0 0.8rem;
+            font-size: 1.4rem;
+        }
+        
+        .tab-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .tab-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tab-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .tab-content .highlight {
+            background-color: #E9E6F5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        
+        .tab-content .highlight h4 {
+            margin-top: 0;
+        }
+        
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .career-card {
+            background-color: #E9E6F5;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .career-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .career-card h5 {
+            color: #5863B7;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .growth-stats {
+            display: flex;
+            align-items: center;
+            margin-top: 0.8rem;
+        }
+        
+        .growth-bar {
+            height: 10px;
+            background-color: #E0E0E0;
+            border-radius: 5px;
+            flex-grow: 1;
+            margin-right: 1rem;
+            overflow: hidden;
+        }
+        
+        .growth-value {
+            height: 100%;
+            background-color: #5863B7;
+            border-radius: 5px;
+        }
+        
+        .relationship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .relationship-card {
+            background-color: white;
+            border: 1px solid #E9E6F5;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .relationship-card h5 {
+            color: #5863B7;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .compatibility-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .compatibility-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .excellent {
+            background-color: #06D6A0;
+        }
+        
+        .good {
+            background-color: #ff9f3a;
+        }
+        
+        .average {
+            background-color: #FF9F1C;
+        }
+        
+        .challenging {
+            background-color: #F8497D;
+        }
+        
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .strength-box, .weakness-box {
+            background-color: #E9E6F5;
+            border-radius: 15px;
+            padding: 1.5rem;
+        }
+        
+        .strength-box h4, .weakness-box h4 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .strength-box h4::before {
+            content: '+';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #06D6A0;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+        }
+        
+        .weakness-box h4::before {
+            content: '-';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #F8497D;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+        }
+        
+        .result-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        /* ===== Share Button Styles ===== */
+.social-share {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.share-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #E9E6F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.share-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #5863B7;
+}
+
+.share-button:hover svg path {
+    stroke: white;
+}
+        /* Ad Styles */
+        .ad-inline {
+            margin: 1.5rem 0;
+            padding: 0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .ad-side {
+            float: left;
+            width: 300px;
+            margin: 0 1.5rem 1.5rem 0;
+        }
+        
+        .ad-right {
+            float: right;
+            margin: 0 0 1.5rem 1.5rem;
+        }
+        
+        .ad-wide {
+            margin: 1.5rem 0;
+        }
+        
+        .ad-content {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+        
+        .ad-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #253542;
+            margin-bottom: 0.5rem;
+        }
+        
+        .ad-text {
+            color: #495057;
+            margin-bottom: 1rem;
+        }
+        
+        .ad-button {
+            background-color: #5863B7;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .ad-button:hover {
+            background-color: #5D4FBF;
+            transform: translateY(-2px);
+        }
+        
+        /* Clear floats after ads */
+        .tab-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .btn-test {
+                padding: 0.8rem 1.6rem;
+                font-size: 1rem;
+            }
+            
+            .question-title {
+                font-size: 1.5rem;
+            }
+            
+            .question {
+                font-size: 1.2rem;
+            }
+            
+            .response-option {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .result-type-large {
+                font-size: 2rem;
+            }
+            
+            .tab-button {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .tab-content {
+                padding: 1.5rem;
+            }
+            
+            .relationship-grid, .career-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ad-side {
+                float: none;
+                width: 100%;
+                margin: 1.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1 id="site-title"><span class="logo-accent">Know</span>YouBetter</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="home-link">Home</a></li>
+                    <li><a href="#personality-types">Personality Types</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#" id="nav-test-link">Take the Test</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Home Page -->
+    <div id="home-page" class="home-container">
+        <div class="ad-container">
+            <div class="ad-banner">Ad</div>
+        </div>
+        
+        <s<section class="hero">
+            <div class="hero-content">
+                <p class="hero-tagline">Personality Assessment</p>
+                <h2>Discover Your True Personality & Unlock Your Full Potential</h2>
+                <p>Our science-based assessment reveals your unique strengths, helps you make better career decisions, and improves your relationships through deeper self-understanding.</p>
+                <button id="start-test-btn" class="btn-test">Start the Test</button>
+            </div>
+        </section>
+        
+        <div class="container">
+            <div class="ad-grid">
+                <div class="ad-small">Ad</div>
+                <div class="ad-small">Ad</div>
+                <div class="ad-small">Ad</div>
+            </div>
+        </div>
+        
+        <!-- Replace the existing types-section in your HTML file with this code -->
+<section class="types-section">
+    <div class="container">
+        <h2>Explore Personality Types</h2>
+        <div class="types-grid">
+            <!-- The Analytical Thinker -->
+            <div class="type-card">
+                <div class="type-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="#F8497D" opacity="0.2"/>
+                        <path d="M20 10V30M10 20H30" stroke="#F8497D" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>The Analytical Thinker</h3>
+                <p>Logical, precise, and methodical. You solve complex problems with a systematic approach and value objective truth.</p>
+            </div>
+            
+            <!-- The Creative Visionary -->
+            <div class="type-card">
+                <div class="type-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="#ff9f3a" opacity="0.2"/>
+                        <path d="M20 10C15 10 10 15 10 20C10 25 15 30 20 30C25 30 30 25 30 20" stroke="#ff9f3a" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="20" cy="15" r="2" fill="#ff9f3a"/>
+                        <path d="M18 23H22" stroke="#ff9f3a" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>The Creative Visionary</h3>
+                <p>Imaginative, innovative, and artistic. You see possibilities everywhere and develop unique solutions to challenging problems.</p>
+            </div>
+            
+            <!-- The Compassionate Nurturer -->
+            <div class="type-card">
+                <div class="type-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="#06D6A0" opacity="0.2"/>
+                        <path d="M12 20C12 16 16 13 20 13C24 13 28 16 28 20" stroke="#06D6A0" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M15 25C16 27 18 28 20 28C22 28 24 27 25 25" stroke="#06D6A0" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>The Compassionate Nurturer</h3>
+                <p>Empathetic, supportive, and caring. You're deeply attuned to others' emotions and find fulfillment in helping people thrive.</p>
+            </div>
+            
+            <!-- The Determined Achiever -->
+            <div class="type-card">
+                <div class="type-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="#118AB2" opacity="0.2"/>
+                        <path d="M10 30L20 10L30 30" stroke="#118AB2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>The Determined Achiever</h3>
+                <p>Ambitious, focused, and resolute. Your persistence and drive help you overcome obstacles and accomplish your goals.</p>
+            </div>
+            
+            <!-- The Curious Explorer -->
+            <div class="type-card">
+                <div class="type-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="#a29bfe" opacity="0.2"/>
+                        <circle cx="18" cy="18" r="8" stroke="#a29bfe" stroke-width="2" fill="none"/>
+                        <path d="M24 24L28 28" stroke="#a29bfe" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>The Curious Explorer</h3>
+                <p>You're constantly seeking new experiences and knowledge. Your openness to new ideas leads you to diverse interests and perspectives.</p>
+            </div>
+            
+            <!-- The Diplomatic Harmonizer -->
+            <div class="type-card">
+                <div class="type-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="#FF9F1C" opacity="0.2"/>
+                        <path d="M15 15L25 25M15 25L25 15" stroke="#FF9F1C" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="20" cy="20" r="10" stroke="#FF9F1C" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <h3>The Diplomatic Harmonizer</h3>
+                <p>You excel at bringing people together and resolving conflicts. Your balanced perspective creates harmony in challenging group dynamics.</p>
+            </div>
+            
+            <!-- The Strategic Visionary -->
+            <div class="type-card">
+                <div class="type-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="#74b9ff" opacity="0.2"/>
+                        <path d="M12 20H28M20 12V28" stroke="#74b9ff" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="20" cy="20" r="8" stroke="#74b9ff" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <h3>The Strategic Visionary</h3>
+                <p>You have an exceptional ability to see the big picture. Your foresight and strategic thinking help projects reach their fullest potential.</p>
+            </div>
+            
+            <!-- The Reliable Guardian -->
+            <div class="type-card">
+                <div class="type-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="#e84393" opacity="0.2"/>
+                        <path d="M20 10L10 15V25L20 30L30 25V15L20 10Z" stroke="#e84393" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <h3>The Reliable Guardian</h3>
+                <p>You are the bedrock others rely on. Your consistency, responsibility, and practical approach ensure stability for those around you.</p>
+            </div>
+            
+            <!-- The Energetic Catalyst -->
+            <div class="type-card">
+                <div class="type-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="#00b894" opacity="0.2"/>
+                        <path d="M15 20L20 15L25 20L20 25L15 20Z" stroke="#00b894" stroke-width="2" fill="none"/>
+                        <path d="M10 15L15 10L20 15" stroke="#00b894" stroke-width="2" stroke-linecap="round" fill="none"/>
+                        <path d="M25 15L30 10L35 15" stroke="#00b894" stroke-width="2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </div>
+                <h3>The Energetic Catalyst</h3>
+                <p>You bring energy and inspiration to every situation. Your enthusiasm and ability to motivate others spark action and positive change.</p>
+            </div>
+            
+            <!-- The Reflective Sage -->
+            <div class="type-card">
+                <div class="type-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="#6c5ce7" opacity="0.2"/>
+                        <circle cx="20" cy="16" r="6" stroke="#6c5ce7" stroke-width="2" fill="none"/>
+                        <path d="M14 30C14 26 16 24 20 24C24 24 26 26 26 30" stroke="#6c5ce7" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <h3>The Reflective Sage</h3>
+                <p>You possess deep wisdom gained through thoughtful reflection. Your contemplative nature provides valuable perspectives others might overlook.</p>
+            </div>
+        </div>
+    </div>
+    <div class="decorative-shape shape-1"></div>
+    <div class="decorative-shape shape-2"></div>
+</section>
+        
+        <div class="container">
+            <div class="benefits-section">
+                <h2>Why Take Our Personality Test?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 10C15 10 10 15 10 20C10 25 15 30 20 30C25 30 30 25 30 20C30 15 25 10 20 10ZM20 28C16.1 28 12 24.4 12 20C12 15.6 16.1 12 20 12C23.9 12 28 15.6 28 20C28 24.4 23.9 28 20 28Z" fill="#253542"/>
+                                <circle cx="20" cy="17" r="2" fill="#253542"/>
+                                <path d="M16 24C18 26 22 26 24 24" stroke="#253542" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Self-Discovery</h3>
+                        <p>Gain deeper insights into your strengths, weaknesses, motivations, and natural tendencies to better understand yourself.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 30L15 10M25 10V30" stroke="#253542" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M10 15H20M20 25H30" stroke="#253542" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Career Guidance</h3>
+                        <p>Discover career paths that align with your personality type where you're most likely to succeed and find fulfillment.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="20" r="5" stroke="#253542" stroke-width="2"/>
+                                <circle cx="25" cy="20" r="5" stroke="#253542" stroke-width="2"/>
+                                <path d="M20 15V25" stroke="#253542" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Relationship Improvement</h3>
+                        <p>Learn how you interact with others and develop strategies to communicate more effectively with different personality types.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ad-container">
+            <div class="ad-banner">Ad</div>
+        </div>
+        
+        <section class="steps-section">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <svg width="100" height="80" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 15px;">
+                            <rect x="20" y="10" width="60" height="60" rx="5" fill="#E9E6F5"/>
+                            <rect x="30" y="20" width="40" height="5" rx="2.5" fill="#5863B7"/>
+                            <rect x="30" y="30" width="40" height="5" rx="2.5" fill="#5863B7"/>
+                            <rect x="30" y="40" width="40" height="5" rx="2.5" fill="#5863B7"/>
+                            <rect x="30" y="50" width="20" height="5" rx="2.5" fill="#5863B7"/>
+                            <circle cx="75" cy="25" r="15" fill="#F8497D" opacity="0.2"/>
+                            <path d="M70 25L75 30L80 20" stroke="#F8497D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h3>Take the Test</h3>
+                        <p>Complete our comprehensive personality assessment with 40 carefully crafted questions designed to reveal your true personality traits.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <svg width="100" height="80" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 15px;">
+                            <circle cx="50" cy="40" r="30" fill="#E9E6F5"/>
+                            <path d="M35 40L45 50L65 30" stroke="#5863B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="20" cy="20" r="10" fill="#ff9f3a" opacity="0.2"/>
+                            <circle cx="80" cy="20" r="10" fill="#06D6A0" opacity="0.2"/>
+                            <circle cx="20" cy="60" r="10" fill="#118AB2" opacity="0.2"/>
+                            <circle cx="80" cy="60" r="10" fill="#F8497D" opacity="0.2"/>
+                        </svg>
+                        <h3>Get Your Results</h3>
+                        <p>Our advanced algorithm analyzes your responses to determine your primary personality type from 10 distinct possibilities.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <svg width="100" height="80" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 15px;">
+                            <rect x="25" y="15" width="50" height="50" rx="25" fill="#E9E6F5"/>
+                            <path d="M40 35H60M40 45H60" stroke="#5863B7" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M75 15L85 25M85 15L75 25" stroke="#F8497D" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M15 15L25 25M25 15L15 25" stroke="#F8497D" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M75 65L85 75M85 65L75 75" stroke="#F8497D" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M15 65L25 75M25 65L15 75" stroke="#F8497D" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <h3>Apply the Insights</h3>
+                        <p>Use your personalized results to make better decisions in your career, relationships, and personal development journey.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="decorative-shape shape-3"></div>
+        </section>
+        
+        <div class="container">
+            <div class="ad-grid">
+                <div class="ad-small">Ad</div>
+                <div class="ad-small">Ad</div>
+                <div class="ad-small">Ad</div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <h3>About KnowYouBetter</h3>
+                        <p>We're dedicated to helping people understand themselves and others through science-based personality assessments.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#" class="home-link">Home</a></li>
+                            <li><a href="#" id="footer-test-link">Take the Test</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <p>Email: info@knowyoubetter.com</p>
+                        <p>Phone: (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 KnowYouBetter. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Test Page -->
+    <div id="test-page" class="test-container">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="ad-container">
+            <div class="ad-banner">Ad</div>
+        </div>
+        
+        <div class="question-card" id="questionContainer">
+            <h2 class="question-title">Strengths Assessment</h2>
+            <div class="illustration-wrapper">
+                <svg width="200" height="140" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Group of people illustration -->
+                    <circle cx="60" cy="45" r="25" fill="#FFB6C1"/>
+                    <circle cx="140" cy="45" r="25" fill="#ff9f3a"/>
+                    <circle cx="100" cy="35" r="25" fill="#74b9ff"/>
+                    <rect x="85" y="60" width="30" height="40" fill="#06D6A0"/>
+                    <rect x="45" y="70" width="30" height="40" fill="#F8497D"/>
+                    <rect x="125" y="70" width="30" height="40" fill="#5863B7"/>
+                    
+                    <!-- Faces with expressions -->
+                    <circle cx="60" cy="40" r="5" fill="#253542"/>
+                    <circle cx="60" cy="50" r="5" fill="#253542"/>
+                    <path d="M50 45 Q60 55 70 45" stroke="#253542" stroke-width="2" fill="none"/>
+                    
+                    <circle cx="140" cy="40" r="5" fill="#253542"/>
+                    <circle cx="140" cy="50" r="5" fill="#253542"/>
+                    <path d="M135 55 Q140 50 145 55" stroke="#253542" stroke-width="2" fill="none"/>
+                    
+                    <circle cx="95" cy="30" r="5" fill="#253542"/>
+                    <circle cx="105" cy="30" r="5" fill="#253542"/>
+                    <path d="M95 40 Q100 45 105 40" stroke="#253542" stroke-width="2" fill="none"/>
+                    
+                    <rect x="75" y="110" width="50" height="10" rx="5" fill="#e0e0e0"/>
+                    <circle cx="75" cy="115" r="5" fill="#e0e0e0"/>
+                    <circle cx="125" cy="115" r="5" fill="#e0e0e0"/>
+                </svg>
+            </div>
+            <div class="question" id="question"></div>
+            
+            <div class="response-labels">
+                <span class="response-label">Strongly Disagree</span>
+                <span class="response-label" style="visibility: hidden;">Neutral</span>
+                <span class="response-label">Strongly Agree</span>
+            </div>
+            
+            <div class="response-grid" id="responseGrid">
+                <div class="response-option" data-value="1"></div>
+                <div class="response-option" data-value="2"></div>
+                <div class="response-option" data-value="3"></div>
+                <div class="response-option" data-value="4"></div>
+                <div class="response-option" data-value="5"></div>
+                <div class="response-option" data-value="6"></div>
+                <div class="response-option" data-value="7"></div>
+            </div>
+            
+            <!-- Navigation buttons -->
+            <div class="test-navigation">
+                <button id="back-btn" class="nav-btn">Back</button>
+                <button id="skip-btn" class="nav-btn">Skip</button>
+            </div>
+        </div>
+        
+        <div class="ad-container">
+            <div class="ad-square">Ad</div>
+        </div>
+        
+        <div class="simple-result-card" id="simpleResultContainer">
+            <div class="illustration-wrapper">
+                <svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 20L120 60H80L100 20Z" fill="#ff9f3a"/>
+                    <circle cx="100" cy="100" r="40" fill="#5863B7" opacity="0.2"/>
+                    <circle cx="100" cy="100" r="30" fill="#5863B7" opacity="0.4"/>
+                    <circle cx="100" cy="100" r="20" fill="#5863B7" opacity="0.6"/>
+                    <circle cx="100" cy="100" r="10" fill="#5863B7" opacity="0.8"/>
+                </svg>
+            </div>
+            <h2 class="result-title">Your Personality Type</h2>
+            <div class="result-type" id="simpleResultType"></div>
+            <p class="result-description" id="simpleResultDescription"></p>
+            <div class="result-actions">
+                <button id="view-detailed-results" class="btn">View Detailed Results</button>
+                <button id="share-results-btn" class="btn btn-share">Share Results</button>
+                <button id="back-to-home-simple" class="btn btn-secondary">Back to Home</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Enhanced Results Page -->
+    <div id="results-page" class="results-container">
+        <!-- Result Header -->
+        <div class="result-header">
+            <div class="illustration-wrapper">
+                <svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 20L120 60H80L100 20Z" fill="#ff9f3a"/>
+                    <circle cx="100" cy="100" r="40" fill="#5863B7" opacity="0.2"/>
+                    <circle cx="100" cy="100" r="30" fill="#5863B7" opacity="0.4"/>
+                    <circle cx="100" cy="100" r="20" fill="#5863B7" opacity="0.6"/>
+                    <circle cx="100" cy="100" r="10" fill="#5863B7" opacity="0.8"/>
+                    <circle cx="160" cy="30" r="15" fill="#F8497D" opacity="0.2"/>
+                    <circle cx="40" cy="30" r="15" fill="#06D6A0" opacity="0.2"/>
+                    <circle cx="160" cy="120" r="15" fill="#74b9ff" opacity="0.2"/>
+                    <circle cx="40" cy="120" r="15" fill="#a29bfe" opacity="0.2"/>
+                </svg>
+            </div>
+            <h2 class="result-type-large" id="detailedResultType">The Analytical Thinker</h2>
+            <p class="type-description" id="detailedResultDescription">You approach life with logic and precision. Your methodical thinking allows you to solve complex problems effectively. You value facts, data, and objective truth above all else.</p>
+            
+            <div class="type-traits" id="resultTraits">
+                <span class="trait-badge">Logical</span>
+                <span class="trait-badge">Precise</span>
+                <span class="trait-badge">Methodical</span>
+                <span class="trait-badge">Objective</span>
+                <span class="trait-badge">Detail-oriented</span>
+            </div>
+            
+            <div class="social-share">
+                <!-- Facebook Button -->
+                <div class="share-button" data-platform="facebook">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z" stroke="#5863B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <!-- Twitter Button -->
+                <div class="share-button" data-platform="twitter">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5 0-.28-.03-.56-.08-.83A7.72 7.72 0 0023 3z" stroke="#5863B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <!-- LinkedIn Button -->
+                <div class="share-button" data-platform="linkedin">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="#5863B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="2" y="9" width="4" height="12" stroke="#5863B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="4" cy="4" r="2" stroke="#5863B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <!-- Copy Link Button -->
+                <div class="share-button" data-platform="copy">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="8" width="12" height="12" rx="2" stroke="#5863B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2" stroke="#5863B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab Navigation -->
+        <div class="result-tabs">
+            <button class="tab-button active" data-tab="overview">Overview</button>
+            <button class="tab-button" data-tab="strengths-weaknesses">Strengths & Weaknesses</button>
+            <button class="tab-button" data-tab="career">Career Paths</button>
+            <button class="tab-button" data-tab="relationships">Relationships</button>
+            <button class="tab-button" data-tab="growth">Personal Growth</button>
+        </div>
+        
+        <!-- Horizontal Ad Banner -->
+        <div class="ad-container">
+            <div class="ad-banner">Premium Personality Report - Unlock Additional Insights</div>
+        </div>
+        
+        <!-- Tab Content -->
+        <div id="overview" class="tab-content active">
+            <h3>Overview</h3>
+            <p>As an <strong>Analytical Thinker</strong>, you have a natural ability to break down complex problems and find logical solutions. Your thought process is methodical and precise, giving you the ability to spot inconsistencies that others might miss.</p>
+            
+            <p>People with your personality type tend to excel in environments where critical thinking and objective analysis are valued. You prefer to make decisions based on facts rather than emotions, which helps you remain impartial when others might be swayed by feelings.</p>
+            
+            <div class="highlight">
+                <h4>Key Characteristics</h4>
+                <ul>
+                    <li><strong>Thoughtful and reflective</strong> - You carefully consider information before making decisions</li>
+                    <li><strong>Objective and fair</strong> - You strive to remove personal bias from your assessments</li>
+                    <li><strong>Detail-oriented</strong> - You notice small details that others might overlook</li>
+                    <li><strong>Strategic thinker</strong> - You're able to connect current actions to long-term outcomes</li>
+                    <li><strong>Knowledge-seeking</strong> - You have a natural curiosity and desire to understand how things work</li>
+                </ul>
+            </div>
+            
+            <!-- In-content Ad -->
+            <div class="ad-container ad-inline">
+                <div class="ad-content">
+                    <p class="ad-title">Recommended for You</p>
+                    <p class="ad-text">"The Analytical Mind" - Online course tailored for your personality type</p>
+                    <button class="ad-button">Learn More</button>
+                </div>
+            </div>
+            
+            <p>Your analytical mind allows you to excel in fields requiring problem-solving, critical thinking, and systematic approaches. While you may sometimes appear detached when deeply focused on solving problems, your insights are valuable and often provide unique perspectives that others might miss.</p>
+            
+            <p>In your personal relationships, you value honesty and intellectual connection. You appreciate partners and friends who can engage in stimulating conversations and respect your need for logical consistency.</p>
+        </div>
+        
+        <div id="strengths-weaknesses" class="tab-content">
+            <h3>Strengths & Weaknesses</h3>
+            <p>Understanding your personality's inherent strengths and potential blind spots can help you leverage your natural talents while developing strategies to overcome challenges.</p>
+            
+            <div class="strengths-weaknesses">
+                <div class="strength-box">
+                    <h4>Strengths</h4>
+                    <ul>
+                        <li><strong>Excellent problem solver</strong> - You can break down complex issues into manageable components</li>
+                        <li><strong>Objective decision maker</strong> - You base choices on logical analysis rather than emotion</li>
+                        <li><strong>Detail-oriented</strong> - You notice inconsistencies and errors others might miss</li>
+                        <li><strong>Self-sufficient</strong> - You can work independently and require minimal supervision</li>
+                        <li><strong>Intellectually curious</strong> - You're constantly seeking to expand your knowledge</li>
+                    </ul>
+                </div>
+                
+                <div class="weakness-box">
+                    <h4>Potential Challenges</h4>
+                    <ul>
+                        <li><strong>May overthink decisions</strong> - Sometimes analysis can lead to paralysis</li>
+                        <li><strong>Can seem emotionally detached</strong> - Others might perceive you as cold or distant</li>
+                        <li><strong>Perfectionist tendencies</strong> - You might struggle to accept "good enough" solutions</li>
+                        <li><strong>May miss social cues</strong> - When focused on facts, emotional nuances can be overlooked</li>
+                        <li><strong>Critical of illogical thinking</strong> - You might be impatient with those who don't share your approach</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Side Ad -->
+            <div class="ad-container ad-side">
+                <div class="ad-content">
+                    <p class="ad-title">Personal Growth Guide</p>
+                    <p class="ad-text">Get our premium guide to overcoming your personality type's challenges</p>
+                    <button class="ad-button">Get Access</button>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h4>Growth Opportunities</h4>
+                <p>The analytical thinker can grow by:</p>
+                <ul>
+                    <li>Developing emotional intelligence to complement logical reasoning</li>
+                    <li>Practicing flexibility when perfect solutions aren't possible</li>
+                    <li>Communicating thinking processes to help others follow your reasoning</li>
+                    <li>Recognizing the value of intuition alongside analytical thinking</li>
+                    <li>Being patient with different thinking styles and communication approaches</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="career" class="tab-content">
+            <h3>Career Paths</h3>
+            <p>Your analytical personality type thrives in careers that value logical thinking, problem-solving, and objective analysis. You excel in roles where you can apply systematic approaches to complex challenges.</p>
+            
+            <h4>Ideal Work Environment</h4>
+            <p>You perform best in settings that:</p>
+            <ul>
+                <li>Allow for independent work and focused concentration</li>
+                <li>Value accuracy and attention to detail</li>
+                <li>Provide intellectual challenges and continuous learning</li>
+                <li>Have clear structures and logical systems</li>
+                <li>Reward merit and competence rather than social connections</li>
+            </ul>
+            
+            <!-- Ad for Career Content -->
+            <div class="ad-container ad-inline">
+                <div class="ad-content">
+                    <p class="ad-title">Career Compatibility Test</p>
+                    <p class="ad-text">Find your perfect career match with our specialized assessment</p>
+                    <button class="ad-button">Take the Test</button>
+                </div>
+            </div>
+            
+            <h4>Recommended Career Paths</h4>
+            <div class="career-grid">
+                <div class="career-card">
+                    <h5>Data Scientist/Analyst</h5>
+                    <p>Your ability to analyze complex data sets and identify patterns makes you well-suited for data-focused roles.</p>
+                    <div class="growth-stats">
+                        <div class="growth-bar">
+                            <div class="growth-value" style="width: 90%;"></div>
+                        </div>
+                        <span>90% match</span>
+                    </div>
+                </div>
+                
+                <div class="career-card">
+                    <h5>Software Engineer</h5>
+                    <p>Your logical thinking and problem-solving skills are valuable in designing and implementing software solutions.</p>
+                    <div class="growth-stats">
+                        <div class="growth-bar">
+                            <div class="growth-value" style="width: 85%;"></div>
+                        </div>
+                        <span>85% match</span>
+                    </div>
+                </div>
+                
+                <div class="career-card">
+                    <h5>Research Scientist</h5>
+                    <p>Your curiosity and methodical approach are assets in scientific research and investigation.</p>
+                    <div class="growth-stats">
+                        <div class="growth-bar">
+                            <div class="growth-value" style="width: 88%;"></div>
+                        </div>
+                        <span>88% match</span>
+                    </div>
+                </div>
+                
+                <div class="career-card">
+                    <h5>Financial Analyst</h5>
+                    <p>Your ability to work with numbers and spot patterns can be applied to financial markets and investment analysis.</p>
+                    <div class="growth-stats">
+                        <div class="growth-bar">
+                            <div class="growth-value" style="width: 82%;"></div>
+                        </div>
+                        <span>82% match</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h4>Career Development Tips</h4>
+                <ul>
+                    <li>Seek roles that offer continuous learning and intellectual challenges</li>
+                    <li>Develop your communication skills to explain complex concepts clearly</li>
+                    <li>Find mentors who share your analytical approach but have more experience</li>
+                    <li>Consider developing specialized expertise in a field that interests you</li>
+                    <li>Balance independent work with collaborative projects to broaden your perspective</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="relationships" class="tab-content">
+            <h3>Relationships</h3>
+            <p>As an Analytical Thinker, you bring rational thinking and problem-solving abilities to your relationships. Understanding how your personality influences your interactions can help you build stronger connections with others.</p>
+            
+            <!-- Ad for Relationship Content -->
+            <div class="ad-container ad-side ad-right">
+                <div class="ad-content">
+                    <p class="ad-title">Relationship Compatibility</p>
+                    <p class="ad-text">Discover how to connect with different personality types</p>
+                    <button class="ad-button">Find Out More</button>
+                </div>
+            </div>
+            
+            <h4>In Friendships</h4>
+            <p>You tend to form deep connections with a few close friends rather than maintaining a large social circle. You value intellectual stimulation in friendships and enjoy discussing ideas, theories, and interesting concepts.</p>
+            
+            <p>Your friends appreciate your:</p>
+            <ul>
+                <li>Honest and straightforward communication</li>
+                <li>Ability to offer objective advice on problems</li>
+                <li>Loyalty and reliability once trust is established</li>
+                <li>Thoughtful insights and unique perspectives</li>
+            </ul>
+            
+            <h4>In Romantic Relationships</h4>
+            <p>You approach relationships with the same thoughtfulness you apply to other areas of life. You seek partners who respect your need for independence and can engage with you intellectually.</p>
+            
+            <div class="highlight">
+                <h4>Communication Tips</h4>
+                <ul>
+                    <li>Remember to consider emotional aspects alongside logical analysis</li>
+                    <li>Express appreciation explicitly, as others may not infer it from your actions</li>
+                    <li>Practice active listening without immediately trying to solve problems</li>
+                    <li>Be patient with those who communicate more emotionally or indirectly</li>
+                    <li>Share your thought process to help others understand your perspective</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="growth" class="tab-content">
+            <h3>Personal Growth</h3>
+            <p>Your analytical personality provides many strengths, but like all types, there are areas where conscious development can help you become more balanced and effective in all areas of life.</p>
+            
+            <!-- Bottom Ad -->
+            <div class="ad-container ad-wide">
+                <div class="ad-content">
+                    <p class="ad-title">Personal Development Coaching</p>
+                    <p class="ad-text">One-on-one coaching sessions tailored to your personality type needs</p>
+                    <button class="ad-button">Book a Session</button>
+                </div>
+            </div>
+            
+            <h4>Emotional Intelligence</h4>
+            <p>While you excel at logical analysis, developing emotional awareness can enhance your relationships and decision-making:</p>
+            <ul>
+                <li>Practice identifying and naming your emotions as they arise</li>
+                <li>Consider how emotions might be influencing your thoughts and those of others</li>
+                <li>Develop empathy by consciously trying to understand others' emotional perspectives</li>
+                <li>Recognize that emotional information can be as valuable as logical data</li>
+            </ul>
+            
+            <div class="highlight">
+                <h4>Personal Development Exercises</h4>
+                <ul>
+                    <li><strong>Mindfulness practice:</strong> Take time daily to observe your thoughts and feelings without judgment</li>
+                    <li><strong>Perspective-taking:</strong> When disagreeing with someone, try to articulate their viewpoint as fairly as possible</li>
+                    <li><strong>Creative exploration:</strong> Engage regularly in an artistic or creative activity without concern for "getting it right"</li>
+                    <li><strong>Social connection:</strong> Schedule regular social activities to balance your tendency toward solitary pursuits</li>
+                    <li><strong>Emotional journaling:</strong> Keep a record of emotional reactions alongside your analytical thoughts</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="result-actions">
+            <button id="download-report" class="btn">Download Full Report</button>
+            <button id="retake-test" class="btn btn-secondary">Retake the Test</button>
+            <button id="back-to-home-detailed" class="btn btn-secondary">Back to Home</button>
+        </div>
+        
+        <!-- Footer Ad Banner -->
+        <div class="ad-container">
+            <div class="ad-banner">Get Premium Access to All Personality Tools & Insights</div>
+        </div>
+    </div>
+    
+    <!-- ...the rest of your HTML remains the same... -->
+
+<script>
+    // DOM Elements
+    const homePage = document.getElementById('home-page');
+    const testPage = document.getElementById('test-page');
+    const resultsPage = document.getElementById('results-page');
+    const startTestBtn = document.getElementById('start-test-btn');
+    const footerTestLink = document.getElementById('footer-test-link');
+    const backToHomeSimpleBtn = document.getElementById('back-to-home-simple');
+    const backToHomeDetailedBtn = document.getElementById('back-to-home-detailed');
+    const retakeTestBtn = document.getElementById('retake-test');
+    const viewDetailedResultsBtn = document.getElementById('view-detailed-results');
+    const questionContainer = document.getElementById('questionContainer');
+    const simpleResultContainer = document.getElementById('simpleResultContainer');
+    const questionElement = document.getElementById('question');
+    const responseGrid = document.getElementById('responseGrid');
+    const progressBar = document.getElementById('progressBar');
+    const simpleResultType = document.getElementById('simpleResultType');
+    const simpleResultDescription = document.getElementById('simpleResultDescription');
+    const detailedResultType = document.getElementById('detailedResultType');
+    const detailedResultDescription = document.getElementById('detailedResultDescription');
+    const downloadReportBtn = document.getElementById('download-report');
+    const backBtn = document.getElementById('back-btn');
+    const skipBtn = document.getElementById('skip-btn');
+    
+    // Variables for test data
+    let testData = null;
+    let questionsList = [];
+    let personalityTypes = [];
+    let currentQuestion = 0;
+    let totalQuestions = 0;
+    let answers = {};
+    let currentPersonalityType = null;
+    let skippedQuestions = [];
+    
+    // Load questions from JSON file
+    async function loadQuestions() {
+        try {
+            const response = await fetch('questions.json');
+            if (!response.ok) {
+                throw new Error(`Failed to load questions: ${response.status}`);
+            }
+            testData = await response.json();
+            
+            // Extract questions and personality types
+            questionsList = testData.questions;
+            personalityTypes = testData.personalityTypes;
+            totalQuestions = questionsList.length;
+            
+            console.log('Questions loaded successfully:', questionsList.length);
+            return true;
+        } catch (error) {
+            console.error('Error loading questions:', error);
+            alert('Failed to load questions. Please try again later.');
+            return false;
+        }
+    }
+    
+    // Event Listeners
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load questions when the page loads
+        loadQuestions();
+        
+        // Navigation Event Listeners
+        startTestBtn.addEventListener('click', startTest);
+        footerTestLink.addEventListener('click', startTest);
+        document.getElementById('nav-test-link').addEventListener('click', startTest);
+        backToHomeSimpleBtn.addEventListener('click', goBackToHome);
+        backToHomeDetailedBtn.addEventListener('click', goBackToHome);
+        retakeTestBtn.addEventListener('click', restartTest);
+        viewDetailedResultsBtn.addEventListener('click', viewDetailedResults);
+        backBtn.addEventListener('click', goBack);
+        skipBtn.addEventListener('click', skipQuestion);
+
+        // Make site title clickable to return to home
+        document.getElementById('site-title').addEventListener('click', goBackToHome);
+
+        // Add event listeners to response options
+        const responseOptions = document.querySelectorAll('.response-option');
+        responseOptions.forEach(option => {
+            option.addEventListener('click', handleResponse);
+        });
+        
+        // Tab Functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Download report functionality
+        downloadReportBtn.addEventListener('click', () => {
+            alert('Your full personality report is being generated as a PDF. This would typically download a complete report with all sections.');
+        });
+        
+        // Share buttons functionality
+        document.querySelectorAll('.share-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const platform = this.getAttribute('data-platform');
+                
+                if (!currentPersonalityType) return;
+                
+                const resultType = currentPersonalityType.type;
+                const resultDescription = currentPersonalityType.description;
+                const shareUrl = window.location.href.split('?')[0];
+                
+                const shareText = `I just discovered my personality type is "${resultType}" on KnowYouBetter! ${resultDescription}`;
+                
+                switch(platform) {
+                    case 'facebook':
+                        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank', 'width=600,height=400');
+                        break;
+                    case 'twitter':
+                        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=600,height=400');
+                        break;
+                    case 'linkedin':
+                        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=600,height=400');
+                        break;
+                    case 'copy':
+                        navigator.clipboard.writeText(`${shareText} - ${shareUrl}`).then(() => {
+                            alert('Link copied to clipboard!');
+                        });
+                        break;
+                }
+            });
+        });
+        
+        // Ad button functionality
+        document.querySelectorAll('.ad-button').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('This would link to a premium feature or product related to personality insights.');
+            });
+        });
+    });
+    
+    // Start the test
+    async function startTest() {
+        // Make sure questions are loaded
+        if (!testData) {
+            const loaded = await loadQuestions();
+            if (!loaded) return;
+        }
+        
+        homePage.style.display = 'none';
+        testPage.style.display = 'block';
+        resultsPage.style.display = 'none';
+        initTest();
+        
+        // Scroll to top of page
+        window.scrollTo(0, 0);
+    }
+    
+    // Go back to home
+    function goBackToHome() {
+        homePage.style.display = 'block';
+        testPage.style.display = 'none';
+        resultsPage.style.display = 'none';
+        
+        // Scroll to top of page
+        window.scrollTo(0, 0);
+    }
+    
+    // Restart the test
+    function restartTest() {
+        homePage.style.display = 'none';
+        testPage.style.display = 'block';
+        resultsPage.style.display = 'none';
+        initTest();
+        
+        // Scroll to top of page
+        window.scrollTo(0, 0);
+    }
+    
+    // View detailed results
+    function viewDetailedResults() {
+        homePage.style.display = 'none';
+        testPage.style.display = 'none';
+        resultsPage.style.display = 'block';
+        
+        // Update trait badges
+        const traitsContainer = document.getElementById('resultTraits');
+        traitsContainer.innerHTML = '';
+        if (currentPersonalityType && currentPersonalityType.traits) {
+            currentPersonalityType.traits.forEach(trait => {
+                const traitBadge = document.createElement('span');
+                traitBadge.className = 'trait-badge';
+                traitBadge.textContent = trait;
+                traitsContainer.appendChild(traitBadge);
+            });
+        }
+        
+        // Scroll to top of page
+        window.scrollTo(0, 0);
+    }
+    
+    // Go back to the previous question
+    function goBack() {
+        if (currentQuestion > 0) {
+            currentQuestion--;
+            showQuestion(currentQuestion);
+            updateProgressBar();
+            
+            // If this question was previously answered, show the selected option
+            const questionId = questionsList[currentQuestion].id;
+            if (answers[questionId]) {
+                const responseOptions = document.querySelectorAll('.response-option');
+                responseOptions.forEach(option => {
+                    option.classList.remove('selected');
+                    if (parseInt(option.getAttribute('data-value')) === answers[questionId]) {
+                        option.classList.add('selected');
+                    }
+                });
+            }
+            
+            // Update back button state
+            backBtn.disabled = currentQuestion === 0;
+        }
+    }
+    
+    // Skip the current question
+    function skipQuestion() {
+        // Add current question to skipped list if not already answered
+        const questionId = questionsList[currentQuestion].id;
+        if (!answers[questionId] && !skippedQuestions.includes(currentQuestion)) {
+            skippedQuestions.push(currentQuestion);
+        }
+        
+        // Move to next question
+        currentQuestion++;
+        
+        if (currentQuestion < totalQuestions) {
+            showQuestion(currentQuestion);
+            updateProgressBar();
+            
+            // Reset selected option
+            const responseOptions = document.querySelectorAll('.response-option');
+            responseOptions.forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Update back button state
+            backBtn.disabled = false;
+        } else {
+            // Check if there are skipped questions
+            if (skippedQuestions.length > 0) {
+                currentQuestion = skippedQuestions[0];
+                showQuestion(currentQuestion);
+                updateProgressBar();
+                alert(`You have ${skippedQuestions.length} skipped question(s). Let's answer them now.`);
+                
+                // Update back button state
+                backBtn.disabled = currentQuestion === 0;
+            } else {
+                // Show results
+                showResults();
+            }
+        }
+    }
+    
+    // Initialize the test
+    function initTest() {
+        currentQuestion = 0;
+        answers = {};
+        skippedQuestions = [];
+        questionContainer.style.display = 'block';
+        simpleResultContainer.style.display = 'none';
+        
+        showQuestion(currentQuestion);
+        updateProgressBar();
+        
+        // Initialize back button state
+        backBtn.disabled = currentQuestion === 0;
+    }
+    
+    // Show question
+    function showQuestion(index) {
+        if (index < totalQuestions) {
+            questionElement.textContent = questionsList[index].text;
+            
+            // Reset selected options
+            const responseOptions = document.querySelectorAll('.response-option');
+            responseOptions.forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // If this question was previously answered, show the selected option
+            const questionId = questionsList[index].id;
+            if (answers[questionId]) {
+                responseOptions.forEach(option => {
+                    if (parseInt(option.getAttribute('data-value')) === answers[questionId]) {
+                        option.classList.add('selected');
+                    }
+                });
+            }
+        }
+    }
+    
+    // Update progress bar
+    function updateProgressBar() {
+        const progress = (currentQuestion / totalQuestions) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
+    
+    // Handle response
+    function handleResponse(e) {
+        const selectedOption = e.target;
+        const value = parseInt(selectedOption.getAttribute('data-value'));
+        
+        // Remove selected class from all options
+        const responseOptions = document.querySelectorAll('.response-option');
+        responseOptions.forEach(option => {
+            option.classList.remove('selected');
+        });
+        
+        // Add selected class to clicked option
+        selectedOption.classList.add('selected');
+        
+        // Save answer
+        const questionId = questionsList[currentQuestion].id;
+        answers[questionId] = value;
+        
+        // Transition to next question after a short delay
+        setTimeout(() => {
+            questionContainer.classList.add('fade-out');
+            
+            setTimeout(() => {
+                currentQuestion++;
+                
+                if (currentQuestion < totalQuestions) {
+                    showQuestion(currentQuestion);
+                    updateProgressBar();
+                    questionContainer.classList.remove('fade-out');
+                    questionContainer.classList.add('fade-in');
+                    
+                    // Update back button state
+                    backBtn.disabled = currentQuestion === 0;
+                    
+                    setTimeout(() => {
+                        questionContainer.classList.remove('fade-in');
+                    }, 300);
+                } else {
+                    // Remove current question from skipped if it was there
+                    const skippedIndex = skippedQuestions.indexOf(currentQuestion - 1);
+                    if (skippedIndex !== -1) {
+                        skippedQuestions.splice(skippedIndex, 1);
+                    }
+                    
+                    // Show results
+                    showResults();
+                }
+            }, 500);
+        }, 300);
+    }
+    // Function to redirect to results page
+function redirectToResults(personalityType) {
+    // Redirect to results page with personality type as parameter
+    window.location.href = `results.html?type=${personalityType.id}`;
+}
+    // Show results
+    function showResults() {
+        // Check if there are still skipped questions
+        if (skippedQuestions.length > 0) {
+            currentQuestion = skippedQuestions[0];
+            showQuestion(currentQuestion);
+            updateProgressBar();
+            alert(`You have ${skippedQuestions.length} skipped question(s). Let's answer them now.`);
+            return;
+        }
+        
+        // Calculate personality type
+        calculatePersonalityType();
+        
+        // Update result elements
+        simpleResultType.textContent = currentPersonalityType.type;
+        simpleResultDescription.textContent = currentPersonalityType.description;
+        
+        // Update detailed results
+        detailedResultType.textContent = currentPersonalityType.type;
+        detailedResultDescription.textContent = currentPersonalityType.description;
+        
+        // Hide question container and show result container
+        questionContainer.style.display = 'none';
+        simpleResultContainer.style.display = 'block';
+        
+        // Complete progress bar
+        progressBar.style.width = '100%';
+    }
+    
+    // Calculate personality type based on answers
+    function calculatePersonalityType() {
+        // Initialize scores for different dimensions
+        const scores = {
+            energyFlow: { expansive: 0, contained: 0 },
+            informationStyle: { concrete: 0, abstract: 0 },
+            decisionMode: { logic: 0, values: 0 },
+            timeApproach: { structured: 0, fluid: 0 },
+            enneagram: { type1: 0, type2: 0, type3: 0, type4: 0, type5: 0 }
+        };
+        
+        // Calculate scores for each dimension
+        for (const questionId in answers) {
+            const question = questionsList.find(q => q.id === questionId);
+            if (!question) continue;
+            
+            const answerValue = answers[questionId];
+            
+            // Handle different question types
+            if (question.dimension && question.trait) {
+                // Handle core dimension questions
+                // Adjust value if reverse scored
+                const adjustedValue = question.reverseScored ? 8 - answerValue : answerValue;
+                
+                if (scores[question.dimension]) {
+                    scores[question.dimension][question.trait] += adjustedValue;
+                }
+            } else if (question.enneagramType) {
+                // Handle enneagram questions
+                const typeKey = `type${question.enneagramType}`;
+                if (scores.enneagram[typeKey] !== undefined) {
+                    scores.enneagram[typeKey] += answerValue;
+                }
+            }
+        }
+        
+        // Determine dominant traits
+        const dominantTraits = {
+            energyFlow: scores.energyFlow.expansive > scores.energyFlow.contained ? 'expansive' : 'contained',
+            informationStyle: scores.informationStyle.concrete > scores.informationStyle.abstract ? 'concrete' : 'abstract',
+            decisionMode: scores.decisionMode.logic > scores.decisionMode.values ? 'logic' : 'values',
+            timeApproach: scores.timeApproach.structured > scores.timeApproach.fluid ? 'structured' : 'fluid'
+        };
+        
+        // Find highest enneagram type
+        let highestEnneagramScore = -1;
+        let dominantEnneagramType = null;
+        
+        for (const typeKey in scores.enneagram) {
+            if (scores.enneagram[typeKey] > highestEnneagramScore) {
+                highestEnneagramScore = scores.enneagram[typeKey];
+                dominantEnneagramType = parseInt(typeKey.replace('type', ''));
+            }
+        }
+        
+        // Map traits to personality types
+        // This is a simplified mapping - you'd want a more sophisticated algorithm in a real app
+        let typeIndex;
+        
+        if (dominantTraits.decisionMode === 'logic' && dominantTraits.informationStyle === 'concrete') {
+            typeIndex = 0; // Analytical Thinker
+        } else if (dominantTraits.informationStyle === 'abstract' && dominantTraits.timeApproach === 'fluid') {
+            typeIndex = 1; // Creative Visionary
+        } else if (dominantTraits.decisionMode === 'values' && dominantTraits.energyFlow === 'contained') {
+            typeIndex = 2; // Compassionate Nurturer
+        } else if (dominantTraits.timeApproach === 'structured' && dominantTraits.energyFlow === 'expansive') {
+            typeIndex = 3; // Determined Achiever
+        } else {
+            typeIndex = 4; // Curious Explorer
+        }
+        
+        // Ensure valid index
+        if (typeIndex < 0 || typeIndex >= personalityTypes.length) {
+            typeIndex = 0;
+        }
+        
+        currentPersonalityType = personalityTypes[typeIndex];
+        
+        // Log results for debugging
+        console.log('Scores:', scores);
+        console.log('Dominant Traits:', dominantTraits);
+        console.log('Personality Type:', currentPersonalityType);
+        
+        return currentPersonalityType;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+{
+  "questions": [
+    {
+      "id": "EF1",
+      "text": "I feel energized after spending time with a group.",
+      "dimension": "energyFlow",
+      "trait": "expansive",
+      "reverseScored": false
+    },
+    {
+      "id": "EF2",
+      "text": "I need significant alone time to recharge.",
+      "dimension": "energyFlow",
+      "trait": "contained",
+      "reverseScored": false
+    },
+    {
+      "id": "EF3",
+      "text": "I often speak without thinking first.",
+      "dimension": "energyFlow",
+      "trait": "expansive",
+      "reverseScored": true
+    },
+    {
+      "id": "EF4",
+      "text": "I prefer deep one-on-one conversations over parties.",
+      "dimension": "energyFlow",
+      "trait": "contained",
+      "reverseScored": false
+    },
+    {
+      "id": "EF5",
+      "text": "I'm usually the first to initiate social plans.",
+      "dimension": "energyFlow",
+      "trait": "expansive",
+      "reverseScored": false
+    },
+    {
+      "id": "IS1",
+      "text": "I focus on practical details over theoretical ideas.",
+      "dimension": "informationStyle",
+      "trait": "concrete",
+      "reverseScored": false
+    },
+    {
+      "id": "IS2",
+      "text": "I enjoy discussing hypothetical scenarios.",
+      "dimension": "informationStyle",
+      "trait": "abstract",
+      "reverseScored": false
+    },
+    {
+      "id": "DM1",
+      "text": "I prioritize fairness over harmony in conflicts.",
+      "dimension": "decisionMode",
+      "trait": "logic",
+      "reverseScored": false
+    },
+    {
+      "id": "DM2",
+      "text": "I consider people's feelings more important than rules.",
+      "dimension": "decisionMode",
+      "trait": "values",
+      "reverseScored": false
+    },
+    {
+      "id": "TA1",
+      "text": "I work best with a strict schedule.",
+      "dimension": "timeApproach",
+      "trait": "structured",
+      "reverseScored": false
+    },
+    {
+      "id": "TA2",
+      "text": "I prefer staying flexible rather than over-planning.",
+      "dimension": "timeApproach",
+      "trait": "fluid",
+      "reverseScored": false
+    },
+    {
+      "id": "ET1",
+      "text": "I often notice ways things could be improved.",
+      "enneagramType": 1
+    },
+    {
+      "id": "ET2",
+      "text": "I go out of my way to make others feel valued.",
+      "enneagramType": 2
+    },
+    {
+      "id": "ET3",
+      "text": "I adjust my behavior to fit others' expectations.",
+      "enneagramType": 3
+    },
+    {
+      "id": "ET4",
+      "text": "I feel different from others, like I don't belong.",
+      "enneagramType": 4
+    },
+    {
+      "id": "ET5",
+      "text": "I research things just to satisfy my curiosity.",
+      "enneagramType": 5
+    },
+    {
+      "id": "INST1",
+      "text": "I prioritize health, savings, and a stable environment.",
+      "instinct": "sp"
+    },
+    {
+      "id": "INST2",
+      "text": "I care about my reputation and social roles.",
+      "instinct": "so"
+    },
+    {
+      "id": "RES1",
+      "text": "I stay calm under pressure.",
+      "resilience": "steady"
+    },
+    {
+      "id": "RES2",
+      "text": "I often overthink small mistakes.",
+      "resilience": "reactive"
+    },
+    {
+      "id": "EF6",
+      "text": "I find myself thinking out loud during conversations.",
+      "dimension": "energyFlow",
+      "trait": "expansive",
+      "reverseScored": false
+    },
+    {
+      "id": "EF7",
+      "text": "I carefully consider my words before speaking.",
+      "dimension": "energyFlow",
+      "trait": "contained",
+      "reverseScored": false
+    },
+    {
+      "id": "IS3",
+      "text": "I prefer learning specific skills over general concepts.",
+      "dimension": "informationStyle",
+      "trait": "concrete",
+      "reverseScored": false
+    },
+    {
+      "id": "IS4",
+      "text": "I enjoy thinking about the underlying patterns behind things.",
+      "dimension": "informationStyle",
+      "trait": "abstract",
+      "reverseScored": false
+    },
+    {
+      "id": "DM3",
+      "text": "I make decisions based primarily on logical analysis.",
+      "dimension": "decisionMode",
+      "trait": "logic",
+      "reverseScored": false
+    },
+    {
+      "id": "DM4",
+      "text": "I often make decisions based on how they will affect others.",
+      "dimension": "decisionMode",
+      "trait": "values",
+      "reverseScored": false
+    },
+    {
+      "id": "TA3",
+      "text": "I like having clear deadlines and timelines.",
+      "dimension": "timeApproach",
+      "trait": "structured",
+      "reverseScored": false
+    },
+    {
+      "id": "TA4",
+      "text": "I prefer to leave my options open as long as possible.",
+      "dimension": "timeApproach",
+      "trait": "fluid",
+      "reverseScored": false
+    },
+    {
+      "id": "ET6",
+      "text": "I'm quick to anticipate what could go wrong in a situation.",
+      "enneagramType": 6
+    },
+    {
+      "id": "ET7",
+      "text": "I seek out new experiences and dislike feeling restricted.",
+      "enneagramType": 7
+    },
+    {
+      "id": "ET8",
+      "text": "I naturally take charge in group situations.",
+      "enneagramType": 8
+    },
+    {
+      "id": "ET9",
+      "text": "I avoid conflict and try to find common ground between people.",
+      "enneagramType": 9
+    },
+    {
+      "id": "INST3",
+      "text": "I'm drawn to intense one-on-one connections and experiences.",
+      "instinct": "sx"
+    },
+    {
+      "id": "RES3",
+      "text": "I take challenges in stride rather than becoming overwhelmed.",
+      "resilience": "steady"
+    },
+    {
+      "id": "RES4",
+      "text": "Small setbacks can significantly impact my mood.",
+      "resilience": "reactive"
+    },
+    {
+      "id": "PT1",
+      "text": "I enjoy breaking down complex problems into logical components.",
+      "personalityType": "analytical"
+    },
+    {
+      "id": "PT2",
+      "text": "I approach problems methodically, focusing on facts and data.",
+      "personalityType": "analytical"
+    },
+    {
+      "id": "PT3",
+      "text": "I can easily envision multiple innovative possibilities for any situation.",
+      "personalityType": "creative"
+    },
+    {
+      "id": "PT4",
+      "text": "I often see unique connections between seemingly unrelated ideas.",
+      "personalityType": "creative"
+    },
+    {
+      "id": "PT5",
+      "text": "I'm naturally attuned to the emotional needs of others.",
+      "personalityType": "compassionate"
+    },
+    {
+      "id": "PT6",
+      "text": "Helping others grow and develop gives me a deep sense of fulfillment.",
+      "personalityType": "compassionate"
+    },
+    {
+      "id": "PT7",
+      "text": "I set ambitious goals and work persistently to achieve them.",
+      "personalityType": "determined"
+    },
+    {
+      "id": "PT8",
+      "text": "I'm able to maintain focus on my objectives despite obstacles.",
+      "personalityType": "determined"
+    },
+    {
+      "id": "PT9",
+      "text": "I'm constantly seeking to expand my knowledge and experiences.",
+      "personalityType": "explorer"
+    },
+    {
+      "id": "PT10",
+      "text": "I'm drawn to exploring new ideas, places, and perspectives.",
+      "personalityType": "explorer"
+    },
+    {
+      "id": "PT11",
+      "text": "I excel at finding common ground between conflicting viewpoints.",
+      "personalityType": "harmonizer"
+    },
+    {
+      "id": "PT12",
+      "text": "I naturally see all sides of an issue and can mediate effectively.",
+      "personalityType": "harmonizer"
+    },
+    {
+      "id": "PT13",
+      "text": "I excel at developing long-term plans and seeing the big picture.",
+      "personalityType": "visionary"
+    },
+    {
+      "id": "PT14",
+      "text": "I can anticipate future trends and outcomes before others notice them.",
+      "personalityType": "visionary"
+    },
+    {
+      "id": "PT15",
+      "text": "Others describe me as dependable and consistent in all situations.",
+      "personalityType": "guardian"
+    },
+    {
+      "id": "PT16",
+      "text": "I provide stability and practical support to those around me.",
+      "personalityType": "guardian"
+    },
+    {
+      "id": "PT17",
+      "text": "I bring energy and enthusiasm that inspires others to action.",
+      "personalityType": "catalyst"
+    },
+    {
+      "id": "PT18",
+      "text": "I naturally motivate others and create momentum in group settings.",
+      "personalityType": "catalyst"
+    },
+    {
+      "id": "PT19",
+      "text": "I reflect deeply on experiences and extract meaningful insights.",
+      "personalityType": "sage"
+    },
+    {
+      "id": "PT20",
+      "text": "I take time to contemplate situations from multiple philosophical perspectives.",
+      "personalityType": "sage"
+    },
+    {
+      "id": "EF8",
+      "text": "I enjoy being the center of attention.",
+      "dimension": "energyFlow",
+      "trait": "expansive",
+      "reverseScored": false
+    },
+    {
+      "id": "EF9",
+      "text": "I feel drained after extended social interactions.",
+      "dimension": "energyFlow",
+      "trait": "contained",
+      "reverseScored": false
+    },
+    {
+      "id": "IS5",
+      "text": "I focus more on what is happening now than future possibilities.",
+      "dimension": "informationStyle",
+      "trait": "concrete",
+      "reverseScored": false
+    },
+    {
+      "id": "IS6",
+      "text": "I'm often told my ideas are too theoretical or impractical.",
+      "dimension": "informationStyle",
+      "trait": "abstract",
+      "reverseScored": false
+    },
+    {
+      "id": "DM5",
+      "text": "I value consistency and objectivity in decision making.",
+      "dimension": "decisionMode",
+      "trait": "logic",
+      "reverseScored": false
+    },
+    {
+      "id": "DM6",
+      "text": "I consider the personal impact of decisions over their efficiency.",
+      "dimension": "decisionMode",
+      "trait": "values",
+      "reverseScored": false
+    },
+    {
+      "id": "TA5",
+      "text": "I feel anxious when plans change suddenly.",
+      "dimension": "timeApproach",
+      "trait": "structured",
+      "reverseScored": false
+    },
+    {
+      "id": "TA6",
+      "text": "I enjoy adapting to unexpected situations.",
+      "dimension": "timeApproach",
+      "trait": "fluid",
+      "reverseScored": false
+    }
+  ],
+  "scoring": {
+    "coreDimensions": {
+      "energyFlow": {
+        "expansive": ["EF1", "EF3R", "EF5", "EF6", "EF8"],
+        "contained": ["EF2", "EF4", "EF7", "EF9"]
+      },
+      "informationStyle": {
+        "concrete": ["IS1", "IS3", "IS5"],
+        "abstract": ["IS2", "IS4", "IS6"]
+      },
+      "decisionMode": {
+        "logic": ["DM1", "DM3", "DM5"],
+        "values": ["DM2", "DM4", "DM6"]
+      },
+      "timeApproach": {
+        "structured": ["TA1", "TA3", "TA5"],
+        "fluid": ["TA2", "TA4", "TA6"]
+      }
+    },
+    "enneagram": {
+      "type1": ["ET1"],
+      "type2": ["ET2"],
+      "type3": ["ET3"],
+      "type4": ["ET4"],
+      "type5": ["ET5"],
+      "type6": ["ET6"],
+      "type7": ["ET7"],
+      "type8": ["ET8"],
+      "type9": ["ET9"]
+    },
+    "instincts": {
+      "sp": ["INST1"],
+      "so": ["INST2"],
+      "sx": ["INST3"]
+    },
+    "resilience": {
+      "steady": ["RES1", "RES3"],
+      "reactive": ["RES2", "RES4"]
+    },
+    "personalityTypes": {
+      "analytical": ["PT1", "PT2"],
+      "creative": ["PT3", "PT4"],
+      "compassionate": ["PT5", "PT6"],
+      "determined": ["PT7", "PT8"],
+      "explorer": ["PT9", "PT10"],
+      "harmonizer": ["PT11", "PT12"],
+      "visionary": ["PT13", "PT14"],
+      "guardian": ["PT15", "PT16"],
+      "catalyst": ["PT17", "PT18"],
+      "sage": ["PT19", "PT20"]
+    }
+  },
+  "personalityTypes": [
+    {
+      "id": "analytical",
+      "type": "The Analytical Thinker",
+      "description": "You approach life with logic and precision. Your methodical thinking allows you to solve complex problems effectively. You value facts, data, and objective truth above all else.",
+      "traits": ["Logical", "Precise", "Methodical", "Objective", "Detail-oriented"]
+    },
+    {
+      "id": "creative",
+      "type": "The Creative Visionary",
+      "description": "You see possibilities where others see obstacles. Your imagination and innovative thinking help you develop unique solutions and ideas that others might miss.",
+      "traits": ["Imaginative", "Innovative", "Creative", "Visionary", "Original"]
+    },
+    {
+      "id": "compassionate",
+      "type": "The Compassionate Nurturer",
+      "description": "You're deeply attuned to others' emotions and needs. Your empathy and supportive nature make you an excellent friend and confidant who helps others flourish.",
+      "traits": ["Empathetic", "Supportive", "Caring", "Harmonious", "Understanding"]
+    },
+    {
+      "id": "determined",
+      "type": "The Determined Achiever",
+      "description": "You're driven by goals and results. Your persistence and focus allow you to overcome challenges and accomplish what you set your mind to.",
+      "traits": ["Determined", "Focused", "Goal-oriented", "Efficient", "Ambitious"]
+    },
+    {
+      "id": "explorer",
+      "type": "The Curious Explorer",
+      "description": "You're constantly seeking new experiences and knowledge. Your openness to new ideas and love of learning leads you to diverse interests and perspectives.",
+      "traits": ["Curious", "Adaptable", "Open-minded", "Adventurous", "Inquisitive"]
+    },
+    {
+      "id": "harmonizer",
+      "type": "The Diplomatic Harmonizer",
+      "description": "You excel at bringing people together and resolving conflicts. Your balanced perspective and mediation skills help create harmony in even the most challenging group dynamics.",
+      "traits": ["Diplomatic", "Balanced", "Mediating", "Fair-minded", "Inclusive"]
+    },
+    {
+      "id": "visionary",
+      "type": "The Strategic Visionary",
+      "description": "You have an exceptional ability to see the big picture and plan for the long term. Your foresight and strategic thinking help organizations and projects reach their fullest potential.",
+      "traits": ["Strategic", "Forward-thinking", "Perceptive", "Insightful", "Organized"]
+    },
+    {
+      "id": "guardian",
+      "type": "The Reliable Guardian",
+      "description": "You are the bedrock others rely on. Your consistency, responsibility, and practical approach ensure stability and security for those around you.",
+      "traits": ["Reliable", "Practical", "Responsible", "Dependable", "Steadfast"]
+    },
+    {
+      "id": "catalyst",
+      "type": "The Energetic Catalyst",
+      "description": "You bring energy and inspiration to every situation. Your enthusiasm and ability to motivate others spark action and positive change in communities and teams.",
+      "traits": ["Enthusiastic", "Motivating", "Inspiring", "Dynamic", "Influential"]
+    },
+    {
+      "id": "sage",
+      "type": "The Reflective Sage",
+      "description": "You possess deep wisdom gained through thoughtful reflection. Your contemplative nature and philosophical outlook provide valuable perspectives that others might overlook.",
+      "traits": ["Wise", "Contemplative", "Philosophical", "Patient", "Discerning"]
+    }
+  ]
+}
